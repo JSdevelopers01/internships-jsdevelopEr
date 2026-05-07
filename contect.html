@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Page</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+    font-family:Arial,sans-serif;
+    background:#e5ebeb;
+}
+
+/* TOP SECTION */
+
+.contect-first-slide{
+    width:100%;
+    min-height:250px;
+    background:rgb(240,224,7);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.CONTECT-WELCOME-SLIDE{
+    text-align:center;
+    font-size:clamp(35px,8vw,90px);
+    line-height:1.2;
+}
+
+/* FORM */
+
+.form-box{
+    width:95%;
+    max-width:500px;
+    margin:40px auto;
+    padding:25px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.gender{
+    margin:15px 0;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.gender label{
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:green;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:darkgreen;
+}
+
+/* FOOTER SECTION */
+
+.last-slide{
+    width:100%;
+    background:#757171;
+    padding:20px;
+    margin-top:20px;
+}
+
+.contect_in_slide{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    background:#747a74;
+    padding:25px;
+    border-radius:15px;
+}
+
+.text-4,
+.text_5,
+.TEXT_6{
+    text-align:center;
+    color:white;
+    margin-top:10px;
+    line-height:1.6;
+    word-break:break-word;
+}
+
+.footer{
+    width:100%;
+    background:black;
+    padding:15px;
+}
+
+.TEXT_CEO{
+    text-align:center;
+    color:white;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .CONTECT-WELCOME-SLIDE{
+        font-size:45px;
+    }
+
+    .form-box{
+        width:92%;
+        padding:18px;
+    }
+
+    input{
+        font-size:15px;
+    }
+
+    button{
+        font-size:16px;
+    }
+
+    .text-4,
+    .text_5,
+    .TEXT_6{
+        font-size:14px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="contect-first-slide">
+    <h1 class="CONTECT-WELCOME-SLIDE">
+        WELCOME <br> JS DEVELOPERS
+    </h1>
+</div>
+
+<div class="form-box">
+
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<input type="text" id="fname" placeholder="First Name" required>
+
+<input type="text" id="lname" placeholder="Last Name" required>
+
+<input type="text" id="father" placeholder="Father Name">
+
+<input type="number" id="age" placeholder="Age">
+
+<div class="gender">
+    <label>
+        <input type="radio" name="Gender" value="Male">
+        Male
+    </label>
+
+    <label>
+        <input type="radio" name="Gender" value="Female">
+        Female
+    </label>
+</div>
+
+<input type="email" id="email" placeholder="Email" required>
+
+<input type="text" id="phone" placeholder="Phone">
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+<script>
+
+function sendToWhatsApp(){
+
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var father = document.getElementById("father").value;
+    var age = document.getElementById("age").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+
+    var gender = document.querySelector('input[name="Gender"]:checked');
+    gender = gender ? gender.value : "";
+
+    var message =
+    "First Name: " + fname + "%0A" +
+    "Last Name: " + lname + "%0A" +
+    "Father Name: " + father + "%0A" +
+    "Age: " + age + "%0A" +
+    "Gender: " + gender + "%0A" +
+    "Email: " + email + "%0A" +
+    "Phone: " + phone;
+
+    var url = "https://wa.me/919653590754?text=" + message;
+
+    window.open(url, "_blank");
+}
+
+</script>
+
+<div class="last-slide">
+
+<div class="contect_in_slide">
+
+<p class="text-4">JS DEVELOPERS</p>
+
+<p class="text-4">WEB & APP DEVELOPMENT</p>
+
+<p class="text-4">COMPANY</p>
+
+<p class="text-4">
+ph: +91-8607990754 || ph: +91-9653590754
+</p>
+
+<p class="text_5">
+Email: jk1418614@gmail.com
+</p>
+
+<p class="TEXT_6">
+ADD:- JS DEVELOPERS TECH SOLUTION COMPANY GURUGRAM CYBER HUB SEC:51
+</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<p class="TEXT_CEO">
+FOUNDER & CEO JS DEVELOPERS TECH COMPANY: Mr.JAYAD MOHAMMAD
+</p>
+
+</div>
+
+</body>
+</html>

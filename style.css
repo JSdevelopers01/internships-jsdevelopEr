@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+    font-family:Arial,sans-serif;
+}
+
+/* TOP SECTION */
+
+.first-div{
+    width:100%;
+    min-height:300px;
+    background:#b5c523;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.welcome{
+    text-align:center;
+    font-size:clamp(35px,8vw,90px);
+    color:white;
+    line-height:1.2;
+}
+
+/* TITLES */
+
+.first_text,
+.SECOND_TEXT{
+    padding:15px;
+    text-align:center;
+}
+
+.text_1,
+.text_2{
+    font-size:clamp(22px,5vw,35px);
+    font-weight:bold;
+}
+
+/* CARDS */
+
+.second_slide{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+    justify-content:center;
+    background:#e1e1f7;
+}
+
+.seond_s_left,
+.second_s_rigth{
+    flex:1 1 400px;
+    max-width:500px;
+    border-radius:15px;
+    overflow:hidden;
+    padding-bottom:20px;
+}
+
+.seond_s_left{
+    background:#89848d;
+}
+
+.second_s_rigth{
+    background:#6d6d79;
+}
+
+.web-logo,
+.app-logo{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.web-text,
+.app-text{
+    text-align:center;
+    padding:15px;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* BUTTON */
+
+.first-button,
+.second-button{
+    width:180px;
+    height:50px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    margin-top:20px;
+}
+
+.first-button a,
+.second-button a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* ABOUT SECTION */
+
+.thired_slide{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.right-slide,
+.left-slide{
+    flex:1 1 500px;
+    padding:20px;
+    overflow:hidden;
+}
+
+.right-slide{
+    background:#e5eeee;
+}
+
+.left-slide{
+    background:#dcd9e4;
+}
+
+.right-slide p,
+.left-slide p,
+.right-slide li,
+.left-slide li{
+    line-height:1.8;
+    word-wrap:break-word;
+}
+
+.d-text{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+/* WHATSAPP */
+
+.for_whatsapp{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+    background:#f3f2ee;
+}
+
+.for_whatsapp_left,
+.for_whatsapp_right{
+    flex:1 1 300px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.whatsapp-btn img,
+.call-btn img{
+    width:80px;
+    height:80px;
+    margin:auto;
+    display:block;
+}
+
+.call-btn{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    display:inline-block;
+    margin-top:10px;
+}
+
+.warning-text,
+.call-warning-text{
+    margin-top:15px;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+.fourth_slide,
+.last-slide{
+    width:100%;
+    background:#757171;
+    padding:20px;
+}
+
+.contect_in_slide{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    background:#747a74;
+    padding:20px;
+    border-radius:15px;
+}
+
+.text-4,
+.text_5,
+.TEXT_6{
+    text-align:center;
+    color:white;
+    margin-top:10px;
+    word-break:break-word;
+}
+
+.footer{
+    width:100%;
+    background:black;
+    padding:15px;
+}
+
+.TEXT_CEO{
+    text-align:center;
+    color:white;
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .welcome{
+        font-size:45px;
+    }
+
+    .second_slide{
+        padding:10px;
+    }
+
+    .seond_s_left,
+    .second_s_rigth{
+        width:100%;
+    }
+
+    .right-slide,
+    .left-slide{
+        width:100%;
+        padding:15px;
+    }
+
+    h1,h2,h3{
+        font-size:22px;
+    }
+
+    p,li{
+        font-size:15px;
+    }
+
+    .first-button,
+    .second-button{
+        width:90%;
+    }
+
+    .contect_in_slide{
+        padding:15px;
+    }
+}
